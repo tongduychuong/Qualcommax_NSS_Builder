@@ -12,10 +12,10 @@ on:
 
 env:
   REMOTE_REPOSITORY: AgustinLorenzo/openwrt
-  REMOTE_BRANCH: main-nss
+  REMOTE_BRANCH: main_nss
   CONFIG_FILE: redmiax6.config
   CUSTOM_FILES_PATH: files/
-  RELEASE_PREFIX: main-nss
+  RELEASE_PREFIX: main_nss
   NSS_PACKAGES_REPOSITORY: AgustinLorenzo/nss-packages
   NSS_PACKAGES_REPOSITORY_BRANCH: main_nss_wifi
   TMP_URL: https://github.com/tongduychuong/Openwrt_Redmi_AX6_NSS
