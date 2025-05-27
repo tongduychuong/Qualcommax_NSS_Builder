@@ -18,6 +18,8 @@ env:
   RELEASE_PREFIX: main-nss
   NSS_PACKAGES_REPOSITORY: qosmio/nss-packages
   NSS_PACKAGES_REPOSITORY_BRANCH: NSS-12.5-K6.x
+  TMP_URL: https://github.com/tongduychuong/Openwrt_Redmi_AX6_NSS
+  TMP_BRANCH: Redmi_AX6_AgustinLorenzo_nss_mesh
 
 jobs:
   check_commits:
@@ -106,6 +108,20 @@ jobs:
             echo "Changed files after patch application:"
             git status
           fi
+
+      - name: Update and install feeds
+        run: |
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+
+      - name: Clone source tmp
+        run: |
+          cd openwrt
+          git clone $TMP_URL -b $TMP_BRANCH TMPAPP
+          cp -r TMPAPP/luci-theme-argon/ feeds/luci/themes/
+          cp -r TMPAPP/luci-app-argon-config/ feeds/luci/applications/
+          cp -r TMPAPP/luci-app-openvpn-server/ feeds/luci/applications/
+          cp -r TMPAPP/600-custom-change-txpower-and-dfs.patch package/firmware/wireless-regdb/patches/
 
       - name: Update and install feeds
         run: |
