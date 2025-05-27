@@ -16,7 +16,7 @@ env:
   CONFIG_FILE: redmiax6.config
   CUSTOM_FILES_PATH: files/
   RELEASE_PREFIX: main-nss
-  NSS_PACKAGES_REPOSITORY: qosmio/nss-packages
+  NSS_PACKAGES_REPOSITORY: AgustinLorenzo/nss-packages
   NSS_PACKAGES_REPOSITORY_BRANCH: NSS-12.5-K6.x
   TMP_URL: https://github.com/tongduychuong/Openwrt_Redmi_AX6_NSS
   TMP_BRANCH: Redmi_AX6_AgustinLorenzo_nss_mesh
