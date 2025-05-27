@@ -187,7 +187,7 @@ jobs:
             **Commit:** `${{ needs.check_commits.outputs.nss_packages_repo_latest_commit_sha }}`
 
             ### 📝 Build Information
-            - **Target:** [Xiaomi Mi AIoT Router AX3600](https://openwrt.org/toh/xiaomi/ax3600)
+            - **Target:** [Redmi AX6](https://openwrt.org/inbox/toh/xiaomi/xiaomi_redmi_ax6_ax3000)
             - **Configuration:** [`${{ env.CONFIG_FILE }}`](${{ env.CONFIG_FILE }})
 
             ### 📋 Notes
