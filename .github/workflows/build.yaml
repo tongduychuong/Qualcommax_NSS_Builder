@@ -116,7 +116,6 @@ jobs:
 
       - name: Clone source tmp
         run: |
-          cd openwrt
           git clone $TMP_URL -b $TMP_BRANCH TMPAPP
           cp -r TMPAPP/luci-theme-argon/ feeds/luci/themes/
           cp -r TMPAPP/luci-app-argon-config/ feeds/luci/applications/
