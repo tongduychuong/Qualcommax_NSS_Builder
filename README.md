@@ -4,7 +4,7 @@ This project automates the process of building OpenWrt firmware images for the Q
 
 ## Features
 
-- Automated build process triggered by new commits in the [remote repository](https://github.com/AgustinLorenzo/openwrt) or manual workflow dispatch
+- Automated build process triggered by new commits in the [remote repository](https://github.com/qosmio/openwrt-ipq) or manual workflow dispatch
 - Compiler optimizations for improved performance
 - Hardening build options for enhanced security
 - SSH configuration with strong algorithms and key exchange methods. Refer to the [`ssh_hardening.config`](files/etc/ssh/sshd_config.d/ssh_hardening.conf)
@@ -16,11 +16,11 @@ This project automates the process of building OpenWrt firmware images for the Q
 
 The build process is automated using GitHub Actions and consists of the following steps:
 
-1. Check for new commits in the [remote repository](https://github.com/AgustinLorenzo/openwrt)
+1. Check for new commits in the [remote repository](https://github.com/qosmio/openwrt-ipq)
 2. Install the necessary dependencies
-3. Checkout the [remote repository](https://github.com/AgustinLorenzo/openwrt) and the current repository
+3. Checkout the [remote repository](https://github.com/qosmio/openwrt-ipq) and the current repository
 4. Update and install the OpenWrt feeds
-5. Apply the [NSS status patch](patches/999-add-nss-load-to-status.patch) by [AgustinLorenzo](https://github.com/AgustinLorenzo/openwrt)
+5. Apply the [NSS status patch](patches/999-add-nss-load-to-status.patch) by [qosmio](https://github.com/qosmio/openwrt-ipq)
 6. Configure the firmware image using the provided configuration file
 7. Include SSH hardening configuration and QOL-Enhancements
 8. Build the firmware image
@@ -47,4 +47,4 @@ Contributions to this project are welcome. If you encounter any issues or have s
 - The OpenWrt project for providing the foundation for this firmware build.
 - The Qualcomm IPQ807x platform and the Redmi ax6 router for the hardware support.
 - The community over at the [OpenWrt forum](https://forum.openwrt.org/t/ipq807x-nss-build/148529) for their valuable contributions and resources. 
-- And a special thanks to [AgustinLorenzo](https://github.com/AgustinLorenzo/openwrt) for the main NSS development
+- And a special thanks to [qosmio](https://github.com/qosmio/openwrt-ipq) for the main NSS development
