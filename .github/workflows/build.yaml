@@ -144,7 +144,7 @@ jobs:
 
             ### 📝 Build Information
             - **Target:** [Redmi AX6](https://openwrt.org/inbox/toh/xiaomi/xiaomi_redmi_ax6_ax3000)
-            - **Configuration:** [`${{ env.CONFIG_FILE }}`](${{ env.CONFIG_FILE }}))
+            - **Configuration:** [`${{ env.CONFIG_FILE }}`](${{ env.CONFIG_FILE }})
 
             ### 📋 Notes
             - Automated build triggered by ${{ github.event_name }}
